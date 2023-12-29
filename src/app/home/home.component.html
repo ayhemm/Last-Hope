@@ -1,0 +1,20 @@
+
+<section class="home-section">
+    <h2>Welcome to our Gaming Peripherals Store</h2>
+  
+    <p>
+      Upgrade your gaming setup with the latest and greatest peripherals. Find the perfect keyboard, mouse, and mousepad
+      to enhance your gaming experience.
+    </p>
+  
+    <div class="product-list">
+      <div class="product-item" *ngFor="let product of products">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p class="price">{{ product.price | currency:'USD':'symbol':'1.2-2' }}</p>
+        <button (click)="addToCart(product)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+ 
